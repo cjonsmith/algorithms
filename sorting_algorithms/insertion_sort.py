@@ -1,5 +1,5 @@
 def insertion_sort(a_list):
-    """Sorts a given list using the insertion sort algorithm.
+    """Sorts a given list in place using the insertion sort algorithm.
 
     :param a_list: The list to be sorted
     :return: The sorted list
@@ -11,9 +11,7 @@ def insertion_sort(a_list):
         # elements. If it is, continue to swap it backwards into the list.
         for j in range(i, 0, -1):
             if a_list[j] < a_list[j - 1]:
-                tmp = a_list[j - 1]
-                a_list[j - 1] = a_list[j]
-                a_list[j] = tmp
+                a_list[j], a_list[j - 1] = a_list[j - 1], a_list[j]
             # If the current element is greater than the previous element, then
             # we know the list is in the correct order, since the inner loop only
             # operates on the sorted portion of the list.
