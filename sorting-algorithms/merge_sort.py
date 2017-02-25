@@ -38,5 +38,7 @@ def merge_sort(a_list):
     left_half = merge_sort(left_half)
     right_half = merge_sort(right_half)
 
-    return merge(left_half, right_half)
+    # Change the list in place then return it.
+    a_list = merge(left_half, right_half)
+    return a_list
 
