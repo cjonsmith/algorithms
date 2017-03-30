@@ -18,4 +18,5 @@ def quicksort(collection):
     left = quicksort([x for x in collection if x < pivot])
     right = quicksort([x for x in collection if x > pivot])
 
-    return left.append(pivot) + right
+    left.append(pivot)
+    return left + right
